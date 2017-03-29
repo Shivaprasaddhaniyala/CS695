@@ -28,11 +28,11 @@ library("dplyr")
 #         Social Network Analysis
 #********************************************
 
-# *Load data
-Trump <- read.csv("Trump.csv")
-tweets = Trump$MESSAGE_BODY
+# Load data
+Tablet <- readRDS("Tablet.rds")
+tweets = Tablet$MESSAGE_BODY
 tweets = as.character(tweets)
-screenname = Trump$USER_SCREEN_NAME
+screenname = Tablet$USER_SCREEN_NAME
 screenname = as.character(screenname)
 write.csv(cbind(screenname,tweets), "tweets.csv")
 
