@@ -19,9 +19,9 @@ library(readr)
 ### Section 1: Example of traning and testing data
 
 # load Twitter data for training and testing
-Twitterdata <- read_csv("Twitterdata.csv")
+Twitterdata <- read_csv("CURRENTS.RDS")
 # load data for predicting sentiment
-Trump <- read_csv("TrumpTweets.csv")
+Trump <- read_csv("CURRENTS.RDS")
 
 tweet_all = c(Twitterdata$tweet,Trump$tweet)
 
@@ -52,7 +52,7 @@ cross_validate(container,N,"BAGGING")
 # loading the set of tweets for sentiment analysis
 # Replace the data with your term project data
 
-Trump <- read_csv("Trump.csv")
+Trump <- read_csv("CURRENTS.RDS")
 prep_fun <- tolower
 tok_fun <- word_tokenizer
 it_tweets <- itoken(Trump$MESSAGE_BODY,
